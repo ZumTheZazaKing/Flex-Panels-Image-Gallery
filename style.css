@@ -1,0 +1,84 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.panel1{
+    background-image: url(mountain1.jpg);
+}
+
+
+
+.panel2{
+    background-image: url(mountain2.jpg);
+}
+
+.panel3{
+    background-image: url(mountain3.jpg);
+}
+
+.panel4{
+    background-image: url(mountain4.jpg);
+}
+
+.panel5{
+    background-image: url(mountain5.jpg);
+}
+
+#panels{
+    display: flex;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.panel{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease-in;
+}
+
+
+.panel > *:first-child{
+    transform: translateY(-1000%);
+}
+
+.panel > *:last-child{
+    transform: translateY(1000%);
+}
+
+.panel.open-wide > *:first-child{
+    transform: translateY(0);
+}
+
+.panel.open-wide > *:last-child{
+    transform: translateY(0);
+}
+
+.panel.open-wide{
+    flex: 3;
+}
+
+.panel.open-wide p:nth-child(2){
+    font-size: 72px;
+}
+
+.panel p{
+    font-family: 'Quicksand';
+    font-size: 36px;
+    color: whitesmoke;
+    transition: .2s ease-in;
+}
+
+.panel1 p,
+.panel5 p{
+    color: black;
+}
